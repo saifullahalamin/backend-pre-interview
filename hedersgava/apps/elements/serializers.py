@@ -7,7 +7,7 @@ class ElementSerializer(serializers.Serializer):
     unit = serializers.SerializerMethodField()
 
     def get_datetime(self, instance):
-        return instance.data.record_time
+        return instance.record_time.isoformat()
 
     def get_unit(self, instance):
         return instance.device.unit

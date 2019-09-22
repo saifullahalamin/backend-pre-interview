@@ -4,7 +4,7 @@ from .models import Data
 
 
 class DataAdmin(admin.ModelAdmin):
-    list_display = ('id', 'record_time', )
+    list_display = ('id', )
 
 
 admin.site.register(Data, DataAdmin)
